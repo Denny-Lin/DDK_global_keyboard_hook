@@ -13,6 +13,18 @@ HHOOK SetWindowsHookExA(
 );
 ```
 
+# Example
+
+```C++
+static HHOOK keyboardHook = NULL;
+keyboardHook = SetWindowsHookEx(WH_KEYBOARD_LL, LowLevelKeyboardProc, GetModuleHandle(NULL), 0);
+
+//WH_KEYBOARD_LL
+//LowLevelKeyboardProc
+//GetModuleHandle(NULL)
+//0
+```
+
 # References
 * https://docs.microsoft.com/en-us/windows/win32/api/_inputdev/
 * https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setwindowshookexa
