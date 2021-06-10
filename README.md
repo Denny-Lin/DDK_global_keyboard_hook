@@ -5,11 +5,12 @@
 
 # Structure
 ```C++
-SetWindowsHookExA(
-    _In_ int idHook,
-    _In_ HOOKPROC lpfn,
-    _In_opt_ HINSTANCE hmod,
-    _In_ DWORD dwThreadId);
+HHOOK SetWindowsHookExA(
+  int       idHook,
+  HOOKPROC  lpfn,
+  HINSTANCE hmod,
+  DWORD     dwThreadId
+);
 ```
 
 # References
