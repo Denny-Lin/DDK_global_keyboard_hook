@@ -31,6 +31,20 @@ LRESULT CALLBACK LowLevelKeyboardProc(
 //GetModuleHandle(NULL)
 //0
 ```
+# Let's get started
+```C
+#include <stdio.h>
+#include<windows.h>
+#include <conio.h>
+
+int main(){
+	//set hook
+	
+	//loop with MSG msg
+	
+	return 0;
+} 
+```
 
 # References
 * https://docs.microsoft.com/en-us/windows/win32/api/_inputdev/
