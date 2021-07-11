@@ -104,6 +104,19 @@ LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam
 LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam){
 	
 	//Do something
+	KBDLLHOOKSTRUCT *kbhs = (KBDLLHOOKSTRUCT*)lParam;
+	
+	if(kbhs->flags==128 || kbhs->flags==129){
+		switch(kbhs->vkCode){
+			case 0x30:
+			case 0x31:
+				printf("0\n");
+				break;
+			//...
+			//... 
+		}
+			
+	}
 	
 	return CallNextHookEx(NULL, nCode, wParam, lParam);
 }
