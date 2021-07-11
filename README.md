@@ -99,6 +99,17 @@ LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam
 	//Remove hook
 	UnhookWindowsHookEx(hHook);
 ```
+
+```C
+LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam){
+	
+	//Do something
+	
+	return CallNextHookEx(NULL, nCode, wParam, lParam);
+}
+```
+
+
 # References
 * https://docs.microsoft.com/en-us/windows/win32/api/_inputdev/
 * https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setwindowshookexa
