@@ -79,21 +79,6 @@ LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam
 ```
 
 ```C
-#include <stdio.h>
-#include <windows.h>
-
-LRESULT CALLBACK hookproc(_In_ int, _In_ WPARAM, _In_ LPARAM);
-
-int main(){
-	
-	//set hook
-	HHOOK hHook = SetWindowsHookEx(
-		WH_KEYBOARD_LL,
-		hookproc,
-		GetModuleHandleA(NULL),
-		NULL
-	);
-	
 	//loop with MSG msg
 	MSG msg;
 	while(1){
@@ -108,20 +93,11 @@ int main(){
 			Sleep(0);
 			
 	}
-	
+```
+
+```C	
 	//Remove hook
 	UnhookWindowsHookEx(hHook);
-	
-	return 0;
-} 
-
-LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam){
-	
-	//Do something
-	
-	return CallNextHookEx(NULL, nCode, wParam, lParam);
-}
-
 ```
 # References
 * https://docs.microsoft.com/en-us/windows/win32/api/_inputdev/
