@@ -1,6 +1,7 @@
 # DDK_global_keyboard_hook
 * It is a implement of global keyboard hook.
 * It records and shows in the command line when you typed everything in other processes.  
+* Do not use it to do any illegal activities.
 
 # Structure
 ```C++
