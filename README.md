@@ -34,7 +34,7 @@ LRESULT CALLBACK LowLevelKeyboardProc(
 # Let's get started
 ```C
 #include <stdio.h>
-#include<windows.h>
+#include <windows.h>
 #include <conio.h>
 
 int main(){
