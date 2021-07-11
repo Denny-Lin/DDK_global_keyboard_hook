@@ -15,18 +15,18 @@ HHOOK SetWindowsHookExA(
 
 ```C++
 static HHOOK keyboardHook = NULL;
-keyboardHook = SetWindowsHookEx(WH_KEYBOARD_LL, LowLevelKeyboardProc, GetModuleHandle(NULL), 0);
+keyboardHook = SetWindowsHookEx(WH_KEYBOARD_LL, your_hook_process, GetModuleHandle(NULL), 0);
 
 //WH_KEYBOARD_LL
 
-LRESULT CALLBACK LowLevelKeyboardProc(
+LRESULT CALLBACK your_hook_process(
   _In_ int    nCode,
   _In_ WPARAM wParam,
   _In_ LPARAM lParam
 );
 
-//LowLevelKeyboardProc
 //GetModuleHandle(NULL)
+
 //0
 
 ```
