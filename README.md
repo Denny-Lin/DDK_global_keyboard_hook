@@ -42,6 +42,8 @@ int main(){
 	
 	//loop with MSG msg
 	
+	//Remove hook
+	
 	return 0;
 } 
 ```
@@ -65,6 +67,8 @@ int main(){
 	);
 	
 	//loop with MSG msg
+	
+	//Remove hook
 	
 	return 0;
 } 
@@ -109,6 +113,7 @@ int main(){
 			
 	}
 	
+	//Remove hook
 	UnhookWindowsHookEx(hHook);
 	
 	return 0;
