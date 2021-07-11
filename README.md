@@ -104,13 +104,13 @@ LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam
 			
 	}
 ```
-* Step 3: remove hook
+* Step 4: remove hook
 ```C	
 	//Remove hook
 	UnhookWindowsHookEx(hHook);
 ```
 
-* Step 4: implement hook 
+* Step 5: implement hook 
 ```C
 LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam){
 	
