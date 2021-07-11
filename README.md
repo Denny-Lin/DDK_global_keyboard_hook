@@ -35,7 +35,6 @@ LRESULT CALLBACK LowLevelKeyboardProc(
 ```C
 #include <stdio.h>
 #include <windows.h>
-#include <conio.h>
 
 int main(){
 	//set hook
@@ -51,8 +50,6 @@ int main(){
 ```C
 #include <stdio.h>
 #include <windows.h>
-#include <conio.h>
-
 
 LRESULT CALLBACK hookproc(_In_ int, _In_ WPARAM, _In_ LPARAM);
 
@@ -84,7 +81,6 @@ LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam
 ```C
 #include <stdio.h>
 #include <windows.h>
-#include <conio.h>
 
 LRESULT CALLBACK hookproc(_In_ int, _In_ WPARAM, _In_ LPARAM);
 
