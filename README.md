@@ -30,6 +30,7 @@ LRESULT CALLBACK LowLevelKeyboardProc(
 //0
 ```
 # Let's get started
+* Step 1: main structure
 ```C
 #include <stdio.h>
 #include <windows.h>
@@ -44,7 +45,7 @@ int main(){
 	return 0;
 } 
 ```
-
+* Step 2: set hook
 ```C
 #include <stdio.h>
 #include <windows.h>
@@ -75,7 +76,7 @@ LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam
 	return CallNextHookEx(NULL, nCode, wParam, lParam);
 }
 ```
-
+* Step 3: run hook
 ```C
 	//loop with MSG msg
 	MSG msg;
@@ -92,12 +93,13 @@ LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam
 			
 	}
 ```
-
+* Step 3: remove hook
 ```C	
 	//Remove hook
 	UnhookWindowsHookEx(hHook);
 ```
 
+* Step 4: implement hook 
 ```C
 LRESULT CALLBACK hookproc(_In_ int nCode, _In_ WPARAM wParam, _In_ LPARAM lParam){
 	
