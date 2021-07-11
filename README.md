@@ -18,16 +18,17 @@ static HHOOK keyboardHook = NULL;
 keyboardHook = SetWindowsHookEx(WH_KEYBOARD_LL, LowLevelKeyboardProc, GetModuleHandle(NULL), 0);
 
 //WH_KEYBOARD_LL
-/*
+
 LRESULT CALLBACK LowLevelKeyboardProc(
   _In_ int    nCode,
   _In_ WPARAM wParam,
   _In_ LPARAM lParam
 );
-*/
+
 //LowLevelKeyboardProc
 //GetModuleHandle(NULL)
 //0
+
 ```
 # Let's get started
 * Step 1: main structure
